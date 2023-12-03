@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liste des Salles</title>
+  </head>
+  <body>
+    <h1>Liste des Salles</h1>
+    <ul class="salle-list">
+      {% for salle in salles %}
+      <li>
+        <h3>{{ salle.nom_salle }}</h3>
+        <p>Capacity: {{ salle.capacite }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <style>
+      /* Salle List Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .salle-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .salle-list li {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .salle-list li h3 {
+        margin-top: 0;
+      }
+
+      .salle-list li p {
+        margin-bottom: 0;
+      }
+    </style>
+  </body>
+</html>

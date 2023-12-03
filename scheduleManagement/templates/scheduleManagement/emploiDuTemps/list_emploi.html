@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liste des Emplois du Temps</title>
+  </head>
+  <body>
+    <h1>Liste des Emplois du Temps</h1>
+    <ul class="emploi-list">
+      {% for emploi in emplois %}
+      <li>
+        <h3>{{ emploi.jour_semaine }}</h3>
+        <p>De {{ emploi.heure_debut }} à {{ emploi.heure_fin }}</p>
+        <p>Cours: {{ emploi.cours.nom_cours }}</p>
+        <p>
+          Utilisateur: {{ emploi.utilisateur.nom }} {{ emploi.utilisateur.prenom
+          }}
+        </p>
+        <p>
+          Salle: {{ emploi.salle.nom_salle }} (Capacité: {{
+          emploi.salle.capacite }})
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <style>
+      /* Emploi du Temps List Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .emploi-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .emploi-list li {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .emploi-list li h3 {
+        margin-top: 0;
+      }
+
+      .emploi-list li p {
+        margin-bottom: 0;
+      }
+    </style>
+  </body>
+</html>

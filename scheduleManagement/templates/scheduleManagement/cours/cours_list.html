@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Liste des Cours</title>
+  </head>
+  <body>
+    <h1>Liste des Cours</h1>
+    <ul class="course-list">
+      {% for c in cours %}
+      <li>
+        <h3>{{ c.nom_cours }}</h3>
+        <p>{{ c.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .course-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .course-list li {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .course-list li h3 {
+        margin-top: 0;
+      }
+
+      .course-list li p {
+        margin-bottom: 0;
+      }
+    </style>
+  </body>
+</html>
