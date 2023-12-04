@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import *
 
+
+#acceuil
+def acceuil(request):
+    return render(request , 'scheduleManagement/acceuil/acceuil.html')
 # users
 def user_home(request):
     return render(request , 'scheduleManagement/user/add_user.html')

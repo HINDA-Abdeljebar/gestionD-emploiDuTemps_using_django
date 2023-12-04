@@ -20,6 +20,10 @@ from scheduleManagement import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    #acceuil
+    path('', views.acceuil , name = ''),
+
     #users
     path('users_home/', views.user_home , name = 'users_home'),
     path('add_utilisateur/', views.add_utilisateur, name='add_utilisateur'),
