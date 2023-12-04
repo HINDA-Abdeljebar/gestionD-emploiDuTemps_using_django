@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'scheduleManagement',
+    'bootstrap4',
+
 ]
 
 MIDDLEWARE = [

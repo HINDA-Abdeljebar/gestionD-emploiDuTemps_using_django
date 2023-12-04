@@ -5,7 +5,8 @@
     <title>Add Course</title>
   </head>
   <body>
-    <h1>Add Course</h1>
+    {% include 'scheduleManagement/navbar/navbar.html' %}
+    <h2>Add Course</h2>
     <form action="{% url 'add_cours' %}" method="post">
       {% csrf_token %}
       <label for="nom_cours">Course Name:</label>
@@ -21,10 +22,10 @@
       /* Add Course Form Styles */
       body {
         font-family: Arial, sans-serif;
-        margin: 20px;
+ 
       }
 
-      h1 {
+      h2 {
         text-align: center;
       }
 

@@ -5,7 +5,8 @@
     <title>Add Emploi du Temps</title>
   </head>
   <body>
-    <h1>Add Emploi du Temps</h1>
+    {% include 'scheduleManagement/navbar/navbar.html' %}
+    <h2>Add Emploi du Temps</h2>
     <form action="{% url 'add_emploi' %}" method="post">
       {% csrf_token %}
       <label for="jour_semaine">Jour de la semaine:</label>
@@ -44,10 +45,10 @@
     <style>
       body {
         font-family: Arial, sans-serif;
-        margin: 20px;
+        
       }
 
-      h1 {
+      h2 {
         text-align: center;
       }
 

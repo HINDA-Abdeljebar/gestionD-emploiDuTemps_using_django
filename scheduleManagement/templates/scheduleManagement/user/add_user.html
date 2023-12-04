@@ -6,7 +6,8 @@
     
 </head>
 <body>
-    <h1>Add Utilisateur</h1>
+    {% include 'scheduleManagement/navbar/navbar.html' %}
+    <h2>Add Utilisateur</h2>
     <form action="{% url 'add_utilisateur' %}" method="post">
         {% csrf_token %}
         <label for="nom">Nom:</label>
@@ -26,13 +27,12 @@
 
 
 <style>
-        /* Basic CSS Styles */
+      
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
 }
 
-h1 {
+h2{
     text-align: center;
 }
 
